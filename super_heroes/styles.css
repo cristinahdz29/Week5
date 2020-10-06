@@ -1,0 +1,25 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin: 3% 5%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.movieInfoDiv {
+    display: flex;
+    align-items: center;
+    margin: 3%;
+}
+
+.linkDiv {
+    width: 75%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
