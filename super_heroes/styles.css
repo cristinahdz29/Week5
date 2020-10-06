@@ -1,18 +1,34 @@
+body {
+    background-color: #001f3f;
+}
+
 #content {
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 3% 5%;
+  background-color: #001f3f;
+  color: #80BFFF;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+a {
+    color: #001f3f;
 }
 
 .movieInfoDiv {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin: 3%;
+    border: 2px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
 }
 
 .linkDiv {
@@ -23,3 +39,42 @@ h1 {
     text-align: center;
 }
 
+#featuredDiv {
+    display: flex;
+    margin: 3%;
+    border: 2px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #001f3f;
+    color: #80BFFF;
+    font-size: 20px;
+
+}
+
+.posterImage, .featuredImage {
+    max-width: 123px;
+}
+
+.featuredInfoDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width:100%;
+    font-size: 16px;
+}
+
+/* media query */
+@media (min-width: 801px){
+    #content {
+        margin: 5% 20%;}
+
+    .posterImage, .featuredImage {
+        max-width: 200px;
+    }
+
+    .featuredInfoDiv {
+        font-size: 20px;
+    }
+    
+}
