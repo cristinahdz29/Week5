@@ -126,7 +126,9 @@ searchButton.addEventListener("click", () => {
 // adding event listener to button delete order by email
 deleteButton.addEventListener("click", function () {
   let deleteOrder = deleteTextBox.value;
+  console.log(deleteOrder)
   let foundOrder = orders[deleteOrder];
+  console.log(foundOrder)
 
   let deleteUrl =
     "https://dc-coffeerun.herokuapp.com/api/coffeeorders/" +
