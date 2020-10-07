@@ -47,7 +47,7 @@ input {
 }
 
 input:focus {
-    outline:none;
+  outline: none;
 }
 
 button {
@@ -71,9 +71,25 @@ button:hover {
 }
 
 button:focus {
-    outline:none;
+  outline: none;
 }
 
 #weatherDisplayDiv {
   margin-top: 3%;
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  h1 {
+    font-size: 35px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  input {
+    height: 5%;
+    width: 29%;
+    font-size: 15px;
+  }
 }
