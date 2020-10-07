@@ -37,7 +37,7 @@ p {
 }
 
 p:hover {
-  background: #fffbef;
+  background-color: #f8f6ef;
 }
 
 input {
@@ -45,6 +45,7 @@ input {
   width: 18%;
   border-color: #1a64d6;
   border-radius: 20px;
+  font-size: 18px;
 }
 
 input:focus {
