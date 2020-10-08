@@ -33,8 +33,9 @@ let descriptionObject = {
   "broken clouds": "🌥",
   "overcast clouds": "🌥",
   haze: "🌥",
-  "light rain": "🌧",
+  "light rain": "☔️",
   smoke: "🔥",
+  "heavy intensity rain": "⛈"
 };
 
 // function feelLikeEmoji (){

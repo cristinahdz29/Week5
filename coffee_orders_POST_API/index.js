@@ -39,13 +39,13 @@ function loadCoffeeOrders() {
       //creating li elements to append to UL
       let li = document.createElement("li");
       li.className = "coffeeOrdersLi";
-      // li.innerHTML = `Email: ${email} Order: ${details.coffee}`;
+      // li.innerHTML = `<b>Email:</b> ${email} <b>Order:</b> ${details.coffee}`;
       let pEmail = document.createElement("p");
-      pEmail.innerHTML = `Email: ${email}`;
+      pEmail.innerHTML = `<b>Email: </b> ${email}`;
       li.appendChild(pEmail);
 
       let labelOrder = document.createElement("p");
-      labelOrder.innerHTML = `Order: ${details.coffee}`;
+      labelOrder.innerHTML = `<b>Order: </b> ${details.coffee}`;
       li.appendChild(labelOrder);
 
       coffeeOrdersUl.appendChild(li);
@@ -67,6 +67,7 @@ placeOrderButton.addEventListener("click", () => {
     emailAddress: email,
   };
 
+  
   // console.log(requestObject)
   // console.log(JSON.stringify(requestObject)) --> need to make string so can be sent to server
   // console.log(email)
@@ -84,11 +85,14 @@ placeOrderButton.addEventListener("click", () => {
     loadCoffeeOrders();
   };
 
+
   request.open("POST", "https://dc-coffeerun.herokuapp.com/api/coffeeorders/");
 
   request.setRequestHeader("Content-Type", "application/json");
 
   request.send(JSON.stringify(requestObject));
+
+  
 });
 
 loadCoffeeOrders();
@@ -110,13 +114,24 @@ searchButton.addEventListener("click", () => {
     }
 
     let div = document.createElement("div");
+    div.style.backgroundColor = "#d4e9e2";
+    div.style.marginLeft = "15%";
+    div.style.marginRight = "15%";
+    div.style.padding = "2% 0";
+    div.style.color = "#1e3933";
+    div.style.fontSize = "20px";
+    div.style.borderRadius = "20px";
+
     let pEmail = document.createElement("p");
-    pEmail.innerHTML = foundOrder.emailAddress;
+    let h1 = document.createElement("h1");
+    h1.innerHTML = "Found It! ✅";
+    pEmail.innerHTML = `<b> Email:</b> ${foundOrder.emailAddress}`;
     console.log(pEmail);
+    div.appendChild(h1);
     div.appendChild(pEmail);
 
     let pCoffeeOrder = document.createElement("p");
-    pCoffeeOrder.innerHTML = foundOrder.coffee;
+    pCoffeeOrder.innerHTML = `<b>Order:</b>${foundOrder.coffee}`;
     div.appendChild(pCoffeeOrder);
 
     searchOrdersDiv.appendChild(div);
@@ -126,9 +141,9 @@ searchButton.addEventListener("click", () => {
 // adding event listener to button delete order by email
 deleteButton.addEventListener("click", function () {
   let deleteOrder = deleteTextBox.value;
-  console.log(deleteOrder)
+  console.log(deleteOrder);
   let foundOrder = orders[deleteOrder];
-  console.log(foundOrder)
+  console.log(foundOrder);
 
   let deleteUrl =
     "https://dc-coffeerun.herokuapp.com/api/coffeeorders/" +

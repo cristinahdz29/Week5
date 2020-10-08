@@ -1,0 +1,77 @@
+body {
+  margin-top: 3%;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+h1 {
+  color: #1e3933;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  /* display: block; */
+  margin: 20px auto;
+  border: 1px solid #1e3933;
+  background: #1e3933;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 5px 23px;
+  border-radius: 30px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+}
+button:hover {
+  background: white;
+  color: #1e3933;
+  border: 1px solid#1E3933;
+}
+
+button:focus {
+  outline: none;
+}
+
+input {
+  height: 4%;
+  width: 18%;
+  border-color: #1e3933;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#coffeeOrders {
+  background-color: #d4e9e2;
+  color: #1e3932;
+  padding: 2% 0;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+#makeOrderDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#heading {
+  font-size: 45px;
+}
+
+#makeOrderDiv {
+  background-color: #d4e9e2;
+  border-radius: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
